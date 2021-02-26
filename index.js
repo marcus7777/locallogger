@@ -7,7 +7,7 @@ app.use(cors())
 app.use( express.static( __dirname + '/' ))
 
 var corsOptions = {
-  origin: 'http://localhost:8081/',
+  origin: '*',
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 // Parse URL-encoded bodies (as sent by HTML forms)
@@ -26,5 +26,5 @@ app.get('/', cors(corsOptions), function (req, res, next) {
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`listening at http://localhost:${port} add <script src="http://localhost:${port}/"></script> to you page`)
 })
