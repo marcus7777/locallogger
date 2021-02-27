@@ -26,5 +26,5 @@ app.get('/', cors(corsOptions), function (req, res, next) {
 })
 
 app.listen(port, () => {
-  console.log(`listening at http://localhost:${port} add <script src="http://localhost:${port}/"></script> to you page`)
+  console.log(`listening at http://localhost:${port} add <script src="http://localhost:${port}/"></script> to the page`)
 })
