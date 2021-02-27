@@ -1,7 +1,7 @@
   const post = function() {
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "http://localhost:3000", true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader('Content-Type', 'text/plain;charset=utf-8');
     xhr.send(JSON.stringify(arguments))
   }
   var console = (function(oldCons){
