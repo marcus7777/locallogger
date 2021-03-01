@@ -25,14 +25,13 @@ var corsOptions = {
 
 // Access the parse results as request.body
 app.post('/', cors(corsOptions), function(request, response){
-  let body = JSON.parse(request.rawBody)
-  console.log(body)
+  let body = Object.values(JSON.parse(request.rawBody))
   if (body[0] === "log") {
     for (let i = 1; i < body.length; i++) {
       process.stdout.write("\x1b[31m", body[i], "\x1b[0m")
     }
   } else {
-    console.log(body)
+//    console.log(body)
   }
 })
 
